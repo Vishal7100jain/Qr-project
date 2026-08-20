@@ -1,0 +1,46 @@
+export const MARKET_DATA_API_END_POINT = {
+  stockManagement: {
+    post_csv: "/stock-management/csv",
+    add_stock: "/stock-management",
+    delete_stock: "/stock-management",
+    get_stocksList: "/stock-management",
+    getById: "/stock-management",
+  },
+  etfManagement: {
+    post_csv: "/etf-management/csv",
+    add_etf: "/etf-management",
+    delete_etf: "/etf-management",
+    get_etfList: "/etf-management",
+    edit_etfList: "/etf-management",
+    get_etf_by_sk: "/etf-management",
+  },
+  indexManagement: {
+    get_indexData: "/index-management",
+    post_csv: "/index-management/csv",
+    add_symbol: "/index-management",
+    delete_symbol: "/index-management",
+    list: "/index-management/list",
+  },
+  historicalDataManagement: {
+    get_list: "/historical-data-management",
+    get_logs: "/historical-data-management/logs",
+    get_jobIds: "/historical-data-management/jobs",
+    insert_all: "/historical-data-management/all",
+    insert_by_symbols: "/historical-data-management/symbols",
+    insert_by_range: "/historical-data-management/range",
+    delete: "/historical-data-management",
+  },
+  syncManagement: {
+    sync_instruments: "/sync-management/instruments",
+    sync_market_time: "/sync-management/market-time",
+    sync_holiday_list: "/sync-management/holiday-list",
+    sync_socket_simulation: "/sync-management/socket-simulation",
+  },
+  logoManagement: {
+    get_analysis: "/logo-management",
+    add_logo: "/logo-management",
+    delete_logo: "/logo-management",
+    set_up_logo: "/logo-management/set-up",
+    set_up_existing: "/logo-management/set-up-existing",
+  },
+};

@@ -1,0 +1,53 @@
+services:
+  # admin-panel:
+  #   # build: .
+  #   image: "chartpilot/market-data-chart-pilot:admin-panel"
+  #   container_name: admin-panel
+  #   logging:
+  #     driver: "json-file"
+  #     options:
+  #       max-size: "1m"
+  #       max-file: "3"
+  #   ports:
+  #     - "3000:3000"
+  #   env_file:
+  #     - Admin-panel/.env
+  #   networks:
+  #     - admin-panel-network
+  #   restart: unless-stopped
+
+  # backend:
+  #   # build: .
+  #   image: "chartpilot/market-data-chart-pilot:backend"
+  #   container_name: backend
+  #   logging:
+  #     driver: "json-file"
+  #     options:
+  #       max-size: "1m"
+  #       max-file: "3"
+  #   ports:
+  #     - "3001:3001"
+  #   env_file:
+  #     - backend/.env
+  #   networks:
+  #     - admin-panel-network
+  #   restart: unless-stopped
+
+  mongodb:
+    image: mongo:8.3.8-noble
+    container_name: mongodb
+    restart: unless-stopped
+
+    ports:
+      - "27017:27017"
+
+    volumes:
+      - mongodb_data:/data/db
+
+networks:
+  admin-panel-network:
+    driver: bridge
+    name: admin-panel-network
+
+volumes:
+  mongodb_data:

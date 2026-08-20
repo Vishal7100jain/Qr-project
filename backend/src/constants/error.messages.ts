@@ -1,0 +1,219 @@
+export const CommonErrorMessage = {
+  member: {
+    accountDeleted:
+      "This account has been deleted. Please contact support@yourdomain.com to request reactivation.",
+    accountAlreadyVerified:
+      "This account is already verified. Please log in to continue.",
+    generalError: "Oops! Something went wrong. Please try again shortly.",
+    accountNotFound:
+      "Account not found. Please register to create a new account.",
+    emailRequiredForOTP:
+      "Please provide a valid email address to receive the OTP.",
+    bookingLimitReached:
+      "You already have 10 active bookings. Please complete or cancel some before booking more.",
+    completedCancelBU:
+      "You cannot update a booking that is already completed or cancelled.",
+    bookingNotFound: "Booking not found",
+    oneOfFieldReqBU: "One of the field is required to update the booking",
+    resendOTPFailed: "Failed to re-send OTP.",
+    otpVerificationFailed: "Failed to verify OTP",
+    invalidOTP: "Invalid OTP",
+    expiredOTP: "OTP expired, Please request new OTP!",
+    failedBookingCreation: "Failed to create booking. Please try again later.",
+    failedBookingUpdated: "Failed to update booking. Please try again later.",
+  },
+  admin: {
+    CommingSoonSubs: {
+      comminSoon: "Failed to fetch Comming soon subscriber.",
+    },
+    role: {
+      notFound: "Role not found.",
+      cannotUpdateSuperAdmin: "You can't update the Super Admin role.",
+      nameAlreadyExists: "A role with this name already exists.",
+      idNotFound: "No role found with the provided role ID.",
+      cannotDeleteDefaultRole: "You can't delete the default role.",
+      cannotUpdateDefaultRole: "You can't update the default role name.",
+      cannotDeleteSuperAdmin: "You can't delete the Super Admin role.",
+      cannotRenameSuperAdmin: "You can't update the Super Admin role name.",
+      fetchFailed: "Failed to fetch role.",
+      creationFailed: "Failed to create role",
+      updateFailed: "Failed to update role",
+      deleteFailed: "Failed to delete role",
+    },
+    history: {
+      activityFetchFailed: "Failed to fetch Activity History.",
+      loginFetchFailed: "Failed to fetch Login History.",
+    },
+    booking: {
+      bookingFetchFailed: "Failed to fetch bookings.",
+    },
+    plans: {
+      createPlan: "Failed to create plan",
+      samePlanName: "Plan already existing with this name",
+      fetchFailed: "Failed to fetch plans.",
+      oneOfFieldReqPlan: "One of the field is required to update the plan",
+      updateFailed: "Failed to update plan",
+      deleteFailed: "Failed to delete plan",
+      planNotFound: "Plan not found",
+      monGreaterThanYr: "Montly price must be smaller than yearly price",
+    },
+    planFeature: {
+      createPF: "Failed to create plan feature",
+      fetchFailed: "Failed to fetch plan features",
+      updateFailed: "Failed to update plan feature",
+      deleteFailed: "Failed to delete plan feature",
+      planNotFound:
+        "Plan not found to assign plan feature, one them is inactive or deleted",
+      featureNotFound: "Plan feature not found",
+    },
+    planFAQ: {
+      create: "Failed to create plan FAQ.",
+      fetchFailed: "Failed to fetch plan FAQ.",
+      updateFailed: "Failed to update plan FAQ.",
+      deleteFailed: "Failed to delete plan FAQ.",
+      planNotFound:
+        "Plan not found to assign plan FAQ, one them is inactive or deleted",
+      FaqNotFound: "Plan FAQ not found",
+    },
+    accessManagement: {
+      alreadyExistModule: "Module is already exist's",
+      fetchFailed: "Failed to fetch access premissions.",
+      creationFailed: "Failed to create access premissions.",
+      updateFailed: "Failed to update access premissions.",
+      deleteFailed: "Failed to delete access premissions.",
+    },
+    management: {
+      oneFieldRequired: "At least one field is required to perform update",
+      notFound: "Admin not found.",
+      alreadyExists: "Admin already exists.",
+      emailAlreadyExists: "Email already exists.",
+      creationFailed: "Failed to create admin.",
+      fetchFailed: "Failed to fetch admins.",
+      cannotUpdateSuperAdminStatus:
+        "You can’t edit or change the status of a Super Admin.",
+      superAdminPasswordChangeNotAllowed:
+        "You are not allowed to change the Super Admin password.",
+      superAdminRoleAssignmentRestricted:
+        "Only a Super Admin can assign the Super Admin role.",
+      passwordRequiredToPromoteSuperAdmin:
+        "You must enter your password to promote this admin to Super Admin.",
+      invalidSuperAdminCredentials: "Invalid Super Admin credentials.",
+      cannotRemoveOwnSuperAdmin:
+        "You cannot remove your own Super Admin privileges.",
+      targetPasswordRequiredToDemote:
+        "To change this admin’s role, you must enter their password as they are currently a Super Admin.",
+      targetPasswordIncorrect:
+        "Incorrect credentials. You must enter the correct password for this Super Admin to proceed.",
+      cannotDeleteOwnAccount: "You cannot delete your own account.",
+      passwordRequiredToDeleteSuperAdmin:
+        "To delete this Super Admin, you must enter their password.",
+      invalidPasswordForSuperAdmin: "Incorrect password for this Super Admin.",
+      updateFailed: "Failed to update admin.",
+      deleteFailed: "Failed to delete admin.",
+    },
+    member: {
+      fetchFailed: "Failed to fetch Members",
+      deleteFailed: "Failed to delete Member",
+      updateFailed: "Failed to update Member",
+      notFound: "Member not found",
+    },
+    auth: {
+      invalidCredentails: "Invalid email or password",
+      accountDeleted:
+        "Your account has been deleted. Please contact your administrator to reactivate it.",
+      accountInActive:
+        "Your account has been deactivated. Please contact your administrator for assistance.",
+      loginFailed: "Login failed",
+    },
+    blog: {
+      failedCreation: "Failed to create blog",
+      failedFetch: "Failed to get blogs",
+      failedDelete: "Failed to delete blog",
+      failedUpdate: "Failed to update blog",
+      notFound: "blog not found",
+
+      categoryFailedCreate: "Failed to create category",
+      categoryFailedUpdation: "Failed to update category",
+      categoryFailedDelete: "Failed to delete category",
+      categoryFailedFetch: "Failed to get categories",
+      categoryNotFound: "Category not found",
+      categoryInUse: "This Category is in use with some of the blogs",
+    },
+  },
+};
+
+export const CommonSuccessMessage = {
+  otpResent: "OTP has been resent to your email successfully.",
+  booking: {
+    bookingSuccessful: "Your booking has been submitted successfully!",
+    bookingUpdatedSuccessful: "Your booking has been Updated successfully!",
+    otpSentForVerification:
+      "OTP sent to your email. Please verify to confirm booking.",
+    getBooking: "Booking retrieved successfully",
+  },
+  admin: {
+    role: {
+      roleCreated: "Role created successfully",
+      roleRetrieved: "Roles retrieved successfully",
+      updateSuccess: "Role updated successfully.",
+      deleteSuccess: "Role deleted successfully.",
+    },
+    member: {
+      memberCreated: "Member created successfully",
+      memberRetrieved: "Members retrieved successfully",
+      updateSuccess: "Member updated successfully.",
+      deleteSuccess: "Member deleted successfully.",
+    },
+    blog: {
+      blogCreated: "Blog created successfully",
+      blogRetrieved: "Blogs retrieved successfully",
+      blogDeleteSuccess: "Blog deleted successfully.",
+      blogUpdatedSuccess: "Blog updated successfully.",
+
+      categoryCreated: "Blog Category created successfully",
+      categoryRetrieved: "Blog Category retrieved successfully",
+      categoryUpdateSuccess: "Blog Category updated successfully.",
+      categoryDeleteSuccess: "Blog Category deleted successfully.",
+    },
+    history: {
+      activityRetrieved: "Admins activity retrieved successfully.",
+      loginRetrieved: "Login History retrieved successfully.",
+    },
+    adminManagement: {
+      adminCreated: "Admin created successfully.",
+      adminRetrieved: "Admins retrieved successfully.",
+      adminUpdated: "Admin updated successfully.",
+      adminDeleted: "Admin deleted successfully.",
+    },
+    accessManagement: {
+      accessCreated: "Access Permission created successfully.",
+      accessRetrieved: "Access Permission retrieved successfully.",
+      accessUpdated: "Access Permission updated successfully.",
+      accessDeleted: "Access Permission deleted successfully.",
+    },
+    plans: {
+      createPlan: "Plan created successfully",
+      planRetrieved: "Plans retrieved successfully.",
+      updateSuccess: "Plan updated successfully.",
+      deleteSuccess: "Plan deleted successfully.",
+    },
+    planFeature: {
+      create: "Plan feature created successfully.",
+      retrieved: "Plan features retrieved successfully.",
+      update: "Plan feature updated successfully.",
+      delete: "Plan feature deleted successfully",
+    },
+    planFAQ: {
+      create: "Plan FAQ created successfully.",
+      retrieved: "Plan FAQs retrieved successfully.",
+      update: "Plan FAQ updated successfully.",
+      delete: "Plan FAQ deleted successfully.",
+    },
+    booking: {
+      bookingRetrieved: "Bookings retrieved successfully.",
+    },
+    CommingSoonSubs: {
+      comminSoon: "Comming soon subscriber retrieved successfully.",
+    },
+  },
+};

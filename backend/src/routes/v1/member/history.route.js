@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const history_controller_1 = require("../../../controllers/v1/member/history.controller");
+const history_schema_1 = require("../../../schemas/member/history.schema");
+const validation_utils_1 = require("../../../utils/validation.utils");
+const CalculationHistoryRoute = (0, express_1.Router)();
+CalculationHistoryRoute.post("/", (0, validation_utils_1.validateData)({ body: history_schema_1.createHistorySchema }), history_controller_1.createHistory);
+CalculationHistoryRoute.get("/", (0, validation_utils_1.validateData)({ query: history_schema_1.getUserHistorySchema }), history_controller_1.getUserHistory);
+CalculationHistoryRoute.get("/search", (0, validation_utils_1.validateData)({ query: history_schema_1.getHistoryByNameSchema }), history_controller_1.getHistoryById);
+exports.default = CalculationHistoryRoute;
